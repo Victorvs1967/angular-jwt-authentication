@@ -1,16 +1,23 @@
-<form [formGroup]="loginForm">
-  <fieldset>
-    <legend>Login</legend>
-    <div class="form-field">
-      <label>Email: </label>
-      <input name="email" formControlName="email" type="text" />
-    </div>
-    <div class="form-field">
-      <label>Password: </label>
-      <input name="password" formControlName="password" type="password" />
-    </div>
-  </fieldset>
-  <div class="form-buttons">
-    <button class="button button-primary" (click)="login()">Login</button>
-  </div>
-</form>
+<mat-card>
+  <form [formGroup]="loginForm">
+    <mat-card-content>
+      <mat-card-title>Login</mat-card-title>
+      <p>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" placeholder="email@mail.com" required />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" placeholder="password" required />
+        </mat-form-field>
+      </p>
+      <div class="form-buttons">
+        <button mat-raised-button class="button" color="primary" (click)="login()">Login</button>
+      </div>
+    </mat-card-content>
+  </form>
+
+</mat-card>

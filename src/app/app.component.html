@@ -1,1 +1,10 @@
+<nav>
+  <mat-toolbar color="primary">
+    <button mat-icon-button href="/"><mat-icon>menu</mat-icon></button>
+    <span>Authentication</span>
+    <span style="flex-grow: 1;"></span>
+    <button *ngIf="!isLoggedIn" mat-icon-button (click)="login()"><mat-icon>login</mat-icon></button>
+    <button *ngIf="isLoggedIn" mat-icon-button (click)="logout()"><mat-icon>logout</mat-icon></button>
+  </mat-toolbar>
+</nav>
 <router-outlet></router-outlet>
